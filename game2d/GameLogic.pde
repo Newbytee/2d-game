@@ -1,0 +1,7 @@
+class GameLogic {
+ 
+  void start() {
+    
+  }
+  
+}
