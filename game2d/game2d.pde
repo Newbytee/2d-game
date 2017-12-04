@@ -5,6 +5,8 @@ boolean gameIsOver = false;
 
 void setup() {
  
+  m = new Menu();
+  
   size (512, 512);
    
   mainGame();
@@ -13,20 +15,13 @@ void setup() {
 
 void mainGame() {
  
-  background(#00A0FF);
   rect(0, 400, width-1, 111);
   
-  m = new Menu();
-  
-  if (isPlaying == false) {
-   
-    m.mainMenu();
-    
-  }
+  m.mainMenu();
   
   while (gameIsOver == false) {
     
-    
+    gameIsOver = true;
     
   }
   
