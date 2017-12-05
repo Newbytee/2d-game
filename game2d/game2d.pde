@@ -23,6 +23,12 @@ void draw() {
     
   }
   
+  if (gameIsOver == true) {
+   
+    g.getHighscoreName();
+    
+  }
+  
 }
 
 void mainGame() {
