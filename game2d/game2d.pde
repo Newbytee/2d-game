@@ -1,4 +1,5 @@
 Menu m;
+GameLogic g;
 
 boolean isPlaying = false;
 boolean gameIsOver = false;
@@ -6,6 +7,7 @@ boolean gameIsOver = false;
 void setup() {
  
   m = new Menu();
+  g = new GameLogic();
   
   size (512, 512);
    
@@ -14,6 +16,12 @@ void setup() {
 void draw() {
 
   m.mainMenu();
+  
+  if (isPlaying == true) {
+   
+    g.init();
+    
+  }
   
 }
 
