@@ -20,6 +20,8 @@ void draw() {
   if (isPlaying == true) {
    
     g.init();
+    g.gameLoop();
+    g.drawPlayer();
     
   }
   
@@ -31,15 +33,11 @@ void draw() {
   
 }
 
-void mainGame() {
+void keyPressed() {
  
-  rect(0, 400, width-1, 111);
-  
-  m.mainMenu();
-  
-  while (gameIsOver == false) {
-    
-    gameIsOver = true;
+  if ((keyCode == UP) && (isPlaying == true)) {
+   
+    g.playerJump = 0.9888f;
     
   }
   
