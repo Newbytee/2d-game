@@ -2,6 +2,7 @@ Menu m;
 GameLogic g;
 
 int refresh = 240; //refresh rate of the game, as the time counter depends 
+int random;
 boolean isPlaying = false;
 boolean gameIsOver = false;
 
@@ -24,6 +25,7 @@ void draw() {
     g.init();
     g.gameLoop();
     g.drawPlayer();
+    g.playerGravity();
     
   }
   
@@ -33,6 +35,8 @@ void draw() {
     
   }
   
+  text("meep", 100, 100);
+    
 }
 
 void keyPressed() {

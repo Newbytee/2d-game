@@ -3,11 +3,12 @@ class GameLogic {
   String playerName;
   float speed; //speed of the game
   float playerJump; //jump height
-  float playerYMove;
+  float playerYMove = 0.0f;
   float playerY; //Y coordinate of the player
   int timeS; //passed time in seconds
   int timeC; //counter for when to increment timeS
   int score; //score player recieved
+  boolean playerOnGround = true;
   boolean hasInit = false; //whether the init code has run
   
   GameLogic() {
@@ -51,6 +52,17 @@ class GameLogic {
     
     rect(100, playerY, 20, 20);
     text(playerYMove, 100, 100);
+    
+  }
+  
+  void playerGravity() {
+   
+    if (playerY >= 379) {
+     
+      text("blyat", 300, 150);
+      //playerYMove = playerYMove - 0.1;
+      
+    }
     
   }
   
