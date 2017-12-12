@@ -3,6 +3,7 @@ class GameLogic {
   String playerName;
   float speed; //speed of the game
   float playerJump; //jump height
+  float playerYMove;
   float playerY; //Y coordinate of the player
   int timeS; //passed time in seconds
   int timeC; //counter for when to increment timeS
@@ -23,6 +24,8 @@ class GameLogic {
       score = 0;
       playerY = 380.0f;
       
+      background(#000000);
+      
       hasInit = true;
       
     }
@@ -33,17 +36,27 @@ class GameLogic {
     
     if (playerJump != 0) {
      
-      playerY = playerY * playerJump;
+      playerYMove = playerYMove * playerJump;
+      
+      if (playerYMove < 0.2) {
+       
+        playerJump = 0;
+        playerYMove = 0;
+        
+      }
       
     }
     
+    playerY = playerY - playerYMove;
+    
     rect(100, playerY, 20, 20);
+    text(playerYMove, 100, 100);
     
   }
   
   int gameLoop() { //main game loop, returns score
     
-    if (timeC == 60) { //count time
+    if (timeC == refresh) { //count time
      
       timeS++;
       timeC = 0;
