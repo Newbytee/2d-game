@@ -3,7 +3,7 @@ class GameLogic {
   String playerName;
   float speed; //speed of the game
   float playerJump; //jump height
-  float playerYMove = 0.0f;
+  float playerYMove = 0.0f; //factor of which the player should move on the Y-axis
   float playerY; //Y coordinate of the player
   int timeS; //passed time in seconds
   int timeC; //counter for when to increment timeS
@@ -57,12 +57,27 @@ class GameLogic {
   
   void playerGravity() {
    
-    if (playerY >= 379) {
+    if (playerY >= 379.5) {
      
-      text("blyat", 300, 150);
-      //playerYMove = playerYMove - 0.1;
+      playerYMove = 0;
+      
+    } else {
+     
+      playerYMove = playerYMove - 0.1;
       
     }
+    
+    if (playerY > 380) { //move player back up if they get below ground for whatever reason
+     
+      playerY = 380;
+      
+    }
+    
+  }
+  
+  void playerJump() {
+   
+    playerYMove = 5.0f;
     
   }
   
