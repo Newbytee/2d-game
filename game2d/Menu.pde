@@ -47,4 +47,14 @@ class Menu {
     
   }
   
+  void enableDebug() {
+  
+    if (((key == 'D') || (key == 'd')) && (isPlaying == false) && (enableDebug == false)) {
+    
+      enableDebug = true;
+      
+    }
+      
+  }
+  
 }

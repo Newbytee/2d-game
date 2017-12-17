@@ -25,6 +25,7 @@ void setup() {
 void draw() {
 
   m.mainMenu();
+  m.enableDebug();
   
   if (isPlaying == true) {
    
@@ -41,22 +42,10 @@ void draw() {
     
   }
   
-  if (((key == 'D') || (key == 'd')) && (isPlaying == false) && (enableDebug == false)) {
-    
-    enableDebug = true;
-    
-    textSize(20);
-    
-    if (i < (refresh * 3)) {
-     
-      text("Debug mode enabled!", 10, height - 10);
-      i++;
-      
-    }
+  t.displayDebug();
     
   }
-      
-}
+   
 
 void keyPressed() {
  

@@ -2,8 +2,8 @@ class GameLogic {
  
   String playerName;
   float speed; //speed of the game
-  float playerJump; //jump height
-  float playerYMove = 0.0f; //factor of which the player should move on the Y-axis
+  float playerJump; //jump height (unused)
+  float playerYMove; //factor of which the player should move on the Y-axis
   float playerY; //Y coordinate of the player
   int timeS; //passed time in seconds
   int timeC; //counter for when to increment timeS
@@ -24,6 +24,7 @@ class GameLogic {
       timeC = 0;
       score = 0;
       playerY = 380.0f;
+      playerYMove = 0.0f;
       
       background(#000000);
       
@@ -39,18 +40,19 @@ class GameLogic {
      
       playerYMove = playerYMove * playerJump;
       
-      if (playerYMove < 0.2) {
+      /*if (playerYMove < 0.2) {
        
         playerJump = 0;
         playerYMove = 0;
         
-      }
+      }*/
       
     }
     
-    playerY = playerY - playerYMove;
+    playerY -= playerYMove;
     
     rect(100, playerY, 20, 20);
+    text(playerJump, 100, 120);
     text(playerYMove, 100, 100);
     
   }

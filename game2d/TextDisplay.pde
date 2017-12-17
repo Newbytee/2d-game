@@ -1,31 +1,20 @@
-//unused
-
 class TextDisplay {
   
-  String text;
-  int x;
-  int y;
-
-  TextDisplay() {}
+  TextDisplay() {
   
-  void displayText(String text, int x, int y) {
+  }  
+    
+    void displayDebug() {
    
-    for (int i = 0; i < (refresh * 6); i++) {
-     
-      text(text, x, y);
-      
-      try {
-        
-        Thread.sleep(1000/refresh);
-        
-      } catch(InterruptedException ex) {
-        
-        Thread.currentThread().interrupt();
-
-      }
-      
+      if (enableDebug == true) {
+   
+      textSize(16);
+      text("Debug mode", width - 105, 20);
+    
     }
     
+    //void
+    
   }
-  
+ 
 }
