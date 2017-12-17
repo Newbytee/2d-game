@@ -10,13 +10,15 @@ class Player {
     
   }
   
-  void initPlyer() {
+  void init() { //initialise player values
     
     if (hasInit == false) {
    
-      playerY = 380.0f;
+      playerY = 0.0f;
       playerYMove = 0.0f;
       playerJump = 0;
+      
+      hasInit = true;
     
     }
     

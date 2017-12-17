@@ -29,6 +29,7 @@ void draw() {
   
   if (isPlaying == true) {
    
+    p.init();
     g.init();
     g.gameLoop();
     p.drawPlayer();
