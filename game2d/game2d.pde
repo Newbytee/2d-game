@@ -4,10 +4,11 @@ Menu m;
 GameLogic g;
 TextDisplay t;
 Player p;
+Enemy[] e = new Enemy[4];
 
 int refresh = 120; //refresh rate of the game, as the time counter depends 
 boolean isPlaying = false;
-boolean gameIsOver = false;
+boolean gameIsOver = false; //enable if game is over
 boolean enableDebug = false; //whether to show debug information or not
 
 void setup() {
@@ -16,6 +17,7 @@ void setup() {
   g = new GameLogic();
   t = new TextDisplay();
   p = new Player();
+  e = new Enemy[4];
   
   size (512, 512);
   frameRate(refresh);
