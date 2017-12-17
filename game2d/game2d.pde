@@ -3,10 +3,9 @@ import javax.swing.JOptionPane;
 Menu m;
 GameLogic g;
 TextDisplay t;
+Player p;
 
 int refresh = 120; //refresh rate of the game, as the time counter depends 
-int random;
-int i;
 boolean isPlaying = false;
 boolean gameIsOver = false;
 boolean enableDebug = false; //whether to show debug information or not
@@ -16,6 +15,7 @@ void setup() {
   m = new Menu();
   g = new GameLogic();
   t = new TextDisplay();
+  p = new Player();
   
   size (512, 512);
   frameRate(refresh);
@@ -31,8 +31,9 @@ void draw() {
    
     g.init();
     g.gameLoop();
-    g.drawPlayer();
-    g.playerGravity();
+    p.drawPlayer();
+    p.playerGravity();
+    t.displayInfo();
     
   }
   
@@ -49,9 +50,9 @@ void draw() {
 
 void keyPressed() {
  
-  if (((keyCode == UP) && (isPlaying == true)) && (g.playerY > 379)) {
+  if (((keyCode == UP) && (isPlaying == true)) && (p.playerOnGround == true)) {
    
-    g.playerJump();
+    p.playerJump();
     
   }
   
