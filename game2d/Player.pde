@@ -60,7 +60,7 @@ class Player {
      
       playerYMove = 0;
       
-    } else {
+    } else { //beep
      
       playerYMove = playerYMove - 0.1;
       
