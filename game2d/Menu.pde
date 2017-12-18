@@ -8,7 +8,7 @@ class Menu {
   
   void mainMenu() {
     
-    if (isPlaying == false) {
+    if (isPlaying == false && gameIsOver == false) {
     
       background(#00A0FF);
     
@@ -43,6 +43,13 @@ class Menu {
         
       }
     
+    }
+    
+    if (gameIsOver == true) {
+     
+      textSize(40);
+      text("Game over!", (width/4) + 10, (height/2) - 20);
+      
     }
     
   }

@@ -16,7 +16,7 @@ class Enemy {
   
   void spawn() {
    
-    rect(x, y, 10, 10);
+    rect(x, y, 20, 20);
     
   }
   
@@ -29,16 +29,17 @@ class Enemy {
      
       x = width;
       y = (Math.round(random(300, 380)));
+      speedX = random(1.5, 0.5);
       
     }
     
-    if (y > 385) {
+    if (y > 405) {
      
       y = 360;
       
     }
     
-    if (y < 280 || y > 380) {
+    if (y < 280 || y > 400) {
      
       speedY = speedY - (2 * speedY);
       

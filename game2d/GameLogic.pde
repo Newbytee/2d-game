@@ -41,6 +41,12 @@ class GameLogic {
       
     }
     
+    if (gameIsOver == true) {
+     
+      p.hasInit = false;
+      
+    }
+    
     background(#000000);  
     fill(#FFFFFF);
     textSize(16);
