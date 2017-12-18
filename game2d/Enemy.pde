@@ -32,6 +32,18 @@ class Enemy {
       
     }
     
+    if (y > 385) {
+     
+      y = 360;
+      
+    }
+    
+    if (y < 280 || y > 380) {
+     
+      speedY = speedY - (2 * speedY);
+      
+    }
+    
   }
   
 }

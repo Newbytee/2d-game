@@ -43,9 +43,9 @@ void draw() {
     
     for (int i = 0; i < e.length; i++) {
      
-      Enemy s = e[i];
-      s.spawn();
-      s.move();
+      Enemy clone = e[i];
+      clone.spawn();
+      clone.move();
       
     }
     
