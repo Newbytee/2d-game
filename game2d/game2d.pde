@@ -57,6 +57,8 @@ void draw() {
   
   if (gameIsOver == true) {
    
+    isPlaying = false;
+    
     g.getHighscoreName();
     
   }

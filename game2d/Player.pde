@@ -3,6 +3,7 @@ class Player {
   float playerJump; //jump height (unused)
   float playerYMove; //factor of which the player should move on the Y-axis
   float playerY; //Y coordinate of the player
+  int intY;
   boolean hasInit = false;
   boolean playerOnGround = true;
   
@@ -11,6 +12,8 @@ class Player {
   }
   
   void init() { //initialise player values
+    
+    intY = Math.round(playerY);
     
     if (hasInit == false) {
    
@@ -43,6 +46,16 @@ class Player {
     playerYMove = 5.0f;
     
   } 
+  
+  void playerHit(Enemy clone) {
+  
+    if (clone.y == intY) {
+     
+      gameIsOver = true;
+      
+    }
+  
+  }
   
   void playerGravity() {
    

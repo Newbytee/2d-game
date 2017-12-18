@@ -13,6 +13,12 @@ class TextDisplay {
         text(p.playerJump, width - 55, 40);
         text(p.playerYMove, width - 55, 60);
         text(g.timeS, 10, 20);
+        
+        if (gameIsOver == true) {
+         
+          text("Game over", width - 105, 120);
+          
+        }
     
     }
     
