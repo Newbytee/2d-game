@@ -1,10 +1,8 @@
-import javax.swing.JOptionPane;
-
 Menu m;
 GameLogic g;
 TextDisplay t;
 Player p;
-Enemy[] e = new Enemy[4];
+Enemy[] e = new Enemy[10];
 
 int refresh = 120; //refresh rate of the game, as the time counter depends 
 boolean isPlaying = false;
@@ -17,7 +15,7 @@ void setup() {
   g = new GameLogic();
   t = new TextDisplay();
   p = new Player();
-  e = new Enemy[4];
+  e = new Enemy[10];
   
   size (512, 512);
   frameRate(refresh);

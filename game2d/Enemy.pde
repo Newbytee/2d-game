@@ -29,7 +29,7 @@ class Enemy {
      
       x = width;
       y = (Math.round(random(300, 380)));
-      speedX = random(1.5, 0.5);
+      speedX = random(0.5f, 1.5f);
       
     }
     

@@ -17,6 +17,7 @@ class TextDisplay {
         if (gameIsOver == true) {
          
           text("Game over", width - 105, 120);
+          text("Score: " + g.timeS,  width - 105, 160);
           
         }
     

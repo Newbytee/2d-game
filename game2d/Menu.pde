@@ -47,8 +47,11 @@ class Menu {
     
     if (gameIsOver == true) {
      
+      background(#000000);
+      
       textSize(40);
       text("Game over!", (width/4) + 10, (height/2) - 20);
+      text("Score: " + g.timeS, (width/3) - 10, (height/2) + 25);
       
     }
     
