@@ -21,6 +21,12 @@ void setup() {
   
   size (512, 512);
   frameRate(refresh);
+  
+  for (int i = 0; i < e.length; i++) {
+   
+    e[i] = new Enemy(width , height - 100, 0.1, 1);
+    
+  }
    
 }
 
@@ -30,10 +36,19 @@ void draw() {
   m.enableDebug();
   
   if (isPlaying == true) {
-   
+    
     p.init();
     g.init();
     g.gameLoop();
+    
+    for (int i = 0; i < e.length; i++) {
+     
+      Enemy s = e[i];
+      s.spawn();
+      s.move();
+      
+    }
+    
     p.drawPlayer();
     p.playerGravity();
     t.displayInfo();
