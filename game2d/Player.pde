@@ -46,7 +46,7 @@ class Player {
   
   void playerHit(Enemy clone) {
   
-    if (clone.x <= 100) {
+    if ((clone.x <= 100 && clone.x >= 80) && (clone.y >= playerY && clone.y <= playerY + 10)) {
      
       gameIsOver = true;
       
