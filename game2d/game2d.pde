@@ -49,6 +49,14 @@ void draw() {
       
     }
     
+    for (int i = 0; i < e.length; i++) {
+     
+      Enemy clone = e[i];
+      
+      p.playerHit(clone);
+      
+    }
+    
     p.drawPlayer();
     p.playerGravity();
     t.displayInfo();
