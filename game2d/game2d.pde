@@ -24,7 +24,7 @@ void setup() {
   
   for (int i = 0; i < e.length; i++) {
    
-    e[i] = new Enemy(width , height - 100, 0.1, 1);
+    e[i] = new Enemy(width , height - 100, random(0.05, 0.2), random(0.5, 1.5));
     
   }
    
